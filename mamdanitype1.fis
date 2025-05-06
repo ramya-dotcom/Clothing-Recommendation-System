@@ -1,0 +1,72 @@
+[System]
+Name='mamdanitype1'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=17
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Temperature'
+Range=[-11 55]
+NumMFs=3
+MF1='Cold':'trimf',[-38.5 -11 14.2457399103139]
+MF2='Medium':'trimf',[8.74080717488789 21.3488789237668 35.3775784753363]
+MF3='Hot':'trimf',[30.0502242152466 55 82.5]
+
+[Input2]
+Name='Wind Speed'
+Range=[0 45]
+NumMFs=3
+MF1='Low':'trimf',[0 0 17.5]
+MF2='Medium':'trimf',[12.5 22.5 32.5]
+MF3='High':'trimf',[27.5 45 45]
+
+[Input3]
+Name='Humidity'
+Range=[0 100]
+NumMFs=3
+MF1='Low':'trimf',[0 0 33.5]
+MF2='Medium':'trimf',[25 50 75]
+MF3='High':'trimf',[67.5 100 100]
+
+[Input4]
+Name='Rain Probability'
+Range=[0 100]
+NumMFs=3
+MF1='Low':'trimf',[0 0 33.5]
+MF2='Medium':'trimf',[25 50 75]
+MF3='High':'trimf',[67.5 100 100]
+
+[Output1]
+Name='Clothing'
+Range=[0 3]
+NumMFs=4
+MF1='Cold Wear':'trimf',[-1.25 0 1.17808836789901]
+MF2='Normal Wear':'trimf',[0.504508566275924 1.5 2.48467087466186]
+MF3='Warm Wear':'trimf',[1.81920649233544 3 4.25]
+MF4='Rain Wear':'trimf',[0.390892696122633 0.845356176735798 1.2917042380523]
+
+[Rules]
+1 3 3 0, 1 (1) : 1
+2 1 2 0, 2 (0.7) : 1
+3 0 3 0, 3 (0.8) : 1
+3 2 1 0, 3 (0.6) : 1
+2 0 1 2, 2 (0.6) : 1
+3 0 1 0, 3 (0.6) : 1
+1 0 1 0, 1 (1) : 1
+2 3 1 0, 2 (0.6) : 1
+2 0 3 1, 2 (1) : 1
+1 2 0 3, 4 (0.7) : 1
+2 0 3 3, 4 (1) : 1
+0 0 3 3, 4 (1) : 1
+0 2 3 3, 4 (0.5) : 1
+0 0 0 3, 4 (1) : 2
+1 3 1 2, 1 (0.8) : 1
+2 2 3 3, 4 (1) : 1
+2 2 2 1, 2 (0.6) : 1

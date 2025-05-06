@@ -1,0 +1,80 @@
+>> recommendation(25, 20, 95, 90)
+    "Recommend clothing: "    "Normal Wear"
+
+
+result =
+
+    0.8425
+
+
+ans =
+
+    0.8425
+
+>> recommendation(25, 20, 95, 90)
+    "Recommend clothing: "    "Rain Wear"
+
+
+ans =
+
+    0.8425
+
+>> recommendation(10, 25, 95, 90)
+    "Recommend clothing: "    "Rain Wear"
+
+
+ans =
+
+    0.8425
+
+>> recommendation(-5, 30, 75, 10)
+    "Recommend clothing: "    "Rain Wear"
+
+
+ans =
+
+    0.5406
+
+>> recommendation(-22, 10, 45, 15)
+Warning: Input 1 expects a value in range [-11 55], but has a value of -22. 
+> In fuzzy.internal.utility.throwWarning (line 17)
+In fuzzy.internal.utility.evalfis (line 121)
+In evalfis (line 98)
+In recommendation (line 5) 
+Warning: No rules fired for Output 1. Defuzzified output value set to its mean range value 1.5. 
+> In fuzzy.internal.utility.throwWarning (line 17)
+In fuzzy.internal.utility.evalfis (line 121)
+In evalfis (line 98)
+In recommendation (line 5) 
+    "Recommend clothing: "    "Normal Wear"
+
+
+ans =
+
+    1.5000
+
+>> recommendation(22, 10, 45, 15)
+    "Recommend clothing: "    "Normal Wear"
+
+
+ans =
+
+    1.4954
+
+>> recommendation(40, 5, 25, 5)
+    "Recommend clothing: "    "Warm Wear"
+
+
+ans =
+
+    2.4608
+
+>> recommendation(15, 20, 80, 85)
+    "Recommend clothing: "    "Rain Wear"
+
+
+ans =
+
+    0.8423
+
+>> 
