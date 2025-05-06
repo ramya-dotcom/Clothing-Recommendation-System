@@ -1,4 +1,4 @@
-# Clothing-Recommendation-System
+# Clothing-Recommendation-System using Fuzzy Logic
 This is a Mamdani-type fuzzy inference system for weather-based clothing recommendations using four input variables (temperature, wind speed, humidity, and rain probability) to suggest appropriate attire categories (Cold, Normal, Warm, or Rain Wear).
 
 Two implementations were compared: triangular membership functions with centroid defuzzification achieved 90% accuracy, while the trapezoidal- Gaussian with MOM defuzzification reached 80% accuracy. The system's 17-rule knowledge base was fine-tuned through iterative testing of different membership functions, rule weights, and defuzzification methods. Performance evaluation demonstrated contextually appropriate recommendations across diverse weather scenarios, with particular effectiveness in extreme conditions. The research demonstrates how fuzzy logic can effectively model inherently subjective human decision-making, concluding that triangular membership functions with centroid defuzzification offer the optimal balance between accuracy and user experience despite higher computational requirements.
